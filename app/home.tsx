@@ -1,7 +1,7 @@
 import { Box, Typography } from '@mui/material';
-import type { Route } from "./+types/home";
+import type { Route } from './+types/home';
 
-export default function Home() {
+export default function HomePage() {
 	return (
 		<Box>
 			<Typography variant='h4'>Welcome to QuizHub!</Typography>
