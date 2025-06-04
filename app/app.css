@@ -46,5 +46,9 @@ body > .MuiBox-root {
 }
 
 .MuiTextField-root {
-	@apply max-w-[16]
+	@apply w-[20] max-w-[20]
+}
+
+form .MuiBox-root > .MuiFormLabel-root {
+	@apply text-[#000000] font-semibold
 }
