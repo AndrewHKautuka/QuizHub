@@ -13,6 +13,10 @@ body {
 	} */
 }
 
+.MuiTypography-h4 {
+	@apply font-bold
+}
+
 body > .MuiBox-root {
 	@apply m-8
 }
@@ -33,10 +37,14 @@ body > .MuiBox-root {
 	@apply font-semibold text-[#f7f7f7]
 }
 
-.MuiToolbar-root .MuiButton-contained {
+.MuiButton-colorPrimary {
 	@apply bg-[#FF5740]
 }
 
 .MuiToolbar-root .MuiDivider-vertical {
 	@apply bg-[#f7f7f7]
+}
+
+.MuiTextField-root {
+	@apply max-w-[16]
 }
