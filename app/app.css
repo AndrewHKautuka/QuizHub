@@ -16,3 +16,15 @@ body {
 .MuiBox-root {
 	@apply m-8
 }
+
+.MuiToolbar-root {
+	@apply bg-[#4f67cf]
+}
+
+.MuiToolbar-root .MuiSvgIcon-root {
+	@apply text-[#f7f7f7]
+}
+
+.MuiToolbar-root .MuiTypography-root {
+	@apply text-[#f7f7f7]
+}
