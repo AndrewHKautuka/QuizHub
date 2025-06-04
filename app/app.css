@@ -13,7 +13,7 @@ body {
 	} */
 }
 
-.MuiBox-root {
+body > .MuiBox-root {
 	@apply m-8
 }
 
@@ -26,5 +26,17 @@ body {
 }
 
 .MuiToolbar-root .MuiTypography-root {
-	@apply text-[#f7f7f7]
+	@apply text-[#f7f7f7] font-bold
+}
+
+.MuiToolbar-root .MuiButton-root {
+	@apply font-semibold text-[#f7f7f7]
+}
+
+.MuiToolbar-root .MuiButton-contained {
+	@apply bg-[#FF5740]
+}
+
+.MuiToolbar-root .MuiDivider-vertical {
+	@apply bg-[#f7f7f7]
 }
