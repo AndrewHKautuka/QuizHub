@@ -12,3 +12,7 @@ body {
 		color-scheme: dark;
 	} */
 }
+
+.MuiBox-root {
+	@apply m-8
+}
