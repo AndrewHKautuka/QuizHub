@@ -47,7 +47,7 @@ export default function SignUp() {
 								rules={{ required: fieldRequired, pattern: emailPattern, maxLength: maxEmailLength }}
 								control={control}
 								render={({ field }) => (
-									<TextField label="Email" {...field} error={errors.email !== undefined} helperText={errors.email?.message} variant="outlined" />
+									<TextField label="Email" {...field} error={errors.email !== undefined} helperText={errors.email?.message} variant="outlined" required />
 								)}
 							/>
 							
@@ -56,7 +56,7 @@ export default function SignUp() {
 								rules={{ required: fieldRequired, minLength: minPasswordLength, maxLength: maxPasswordLength }}
 								control={control}
 								render={({ field }) => (
-									<TextField label="Password" {...field} error={errors.password !== undefined} helperText={errors.password?.message} type="password" variant="outlined" />
+									<TextField label="Password" {...field} error={errors.password !== undefined} helperText={errors.password?.message} type="password" variant="outlined" required />
 								)}
 							/>
 							
@@ -65,7 +65,7 @@ export default function SignUp() {
 								rules={{ required: fieldRequired, minLength: minPasswordLength, maxLength: maxPasswordLength }}
 								control={control}
 								render={({ field }) => (
-									<TextField label="Confirm Password" {...field} error={errors.confirmPassword !== undefined} helperText={errors.confirmPassword?.message} type="password" variant="outlined" />
+									<TextField label="Confirm Password" {...field} error={errors.confirmPassword !== undefined} helperText={errors.confirmPassword?.message} type="password" variant="outlined" required />
 								)}
 							/>
 						</Grid>
