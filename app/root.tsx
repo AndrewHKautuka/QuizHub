@@ -9,7 +9,6 @@ import {
 
 import type { Route } from "./+types/root";
 import "./app.css";
-import NavBar from "./navbar";
 
 import { StyledEngineProvider } from "@mui/material/styles";
 
