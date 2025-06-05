@@ -15,6 +15,7 @@
     "@mui/material": "^7.1.1",
     "@react-router/node": "^7.5.3",
     "@react-router/serve": "^7.5.3",
+    "@supabase/supabase-js": "^2.49.10",
     "axios": "^1.9.0",
     "isbot": "^5.1.27",
     "react": "^19.1.0",
