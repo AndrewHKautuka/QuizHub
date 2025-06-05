@@ -4,7 +4,7 @@ import NavBarBase from "./navbar-base";
 
 export default function DasboardNavBar() {
 	return (
-		<NavBarBase lhsButtons={(
+		<NavBarBase lhsContent={(
 			<IconButton size='large' edge='start' aria-label='menu' sx={{ mr: 2 }}>
 				<MenuIcon />
 			</IconButton>
