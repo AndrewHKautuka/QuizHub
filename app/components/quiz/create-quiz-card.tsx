@@ -11,7 +11,7 @@ export default function CreateQuizCard() {
 	
 	return (
 		<Grid>
-			<Card>
+			<Card raised>
 				<CardActionArea onClick={onClick} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2, }}>
 					<CardContent sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
 						<AddIcon fontSize="large" />

@@ -13,9 +13,7 @@ export default function AdminQuizCard(props: QuizCardProps) {
 	
 	return (
 		<Grid>
-			<Card>
-				<CardHeader title={props.quiz.title} subheader={props.questionsCount === 1 ? "1 question" : `${props.questionsCount} questions`} />
-				{/* <CardActionArea onClick={onClick} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2, }}> */}
+			<Card raised>
 					<CardContent sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
 						<Typography variant="body2">
 							{props.quiz.description}
