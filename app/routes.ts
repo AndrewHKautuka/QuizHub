@@ -14,6 +14,7 @@ export default [
 			
 			...prefix("quiz", [
 				route("new", "admin/create-quiz/page.tsx"),
+				route(":quizId", "admin/view-quiz.tsx"),
 			]),
 		]),
 	]),
