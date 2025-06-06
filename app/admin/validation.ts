@@ -2,7 +2,7 @@ import type { ValidationRule } from "react-hook-form";
 
 export const fieldRequired: ValidationRule<boolean> = { value: true, message: "This field is required" };
 
-export const quizFieldPattern: ValidationRule<RegExp> = { value: /^([a-zA-Z0-9-_?!][a-zA-Z0-9-_?! ]*[a-zA-Z0-9-_?!])$|^([a-zA-Z0-9-_?!])$/, message: "Must start and end with a-z, A-Z, 0-9, -, _, ? or !; and may additionally conatin spaces" };
+export const quizFieldPattern: ValidationRule<RegExp> = { value: /^([a-zA-Z0-9-_.,?!][a-zA-Z0-9-_.,?! ]*[a-zA-Z0-9-_.,?!])$|^([a-zA-Z0-9-_.,?!])$/, message: "Must start and end with a-z, A-Z, 0-9, -, _, ., ',', ? or !; and may additionally conatin spaces" };
 
 const maxTitleLen: number = 64;
 export const maxTitleLength: ValidationRule<number> = { value: maxTitleLen, message: `At most ${maxTitleLen} characters are allowed` };
