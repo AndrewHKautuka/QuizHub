@@ -17,19 +17,23 @@ body {
 	@apply font-bold
 }
 
+.MainContentBody {
+	@apply m-8
+}
+
 body > .MuiBox-root {
 	@apply m-8
 }
 
 .MuiToolbar-root {
-	@apply bg-[#4f67cf]
+	@apply bg-[#4f67cf] h-[4.5rem]
 }
 
-.MuiToolbar-root .MuiSvgIcon-root {
+:is(.MuiToolbar-root, .MuiDrawer-paper) .MuiSvgIcon-root {
 	@apply text-[#f7f7f7]
 }
 
-.MuiToolbar-root .MuiTypography-root {
+:is(.MuiToolbar-root, .MuiDrawer-paper) .MuiTypography-root {
 	@apply text-[#f7f7f7] font-bold
 }
 
@@ -37,18 +41,54 @@ body > .MuiBox-root {
 	@apply font-semibold text-[#f7f7f7]
 }
 
-.MuiButton-colorPrimary {
+.MuiButton-colorPrimary.MuiButton-contained {
 	@apply bg-[#FF5740]
 }
 
-.MuiToolbar-root .MuiDivider-vertical {
+.MuiButton-colorSecondary.MuiButton-outlined {
+	@apply border-2 border-[#4f67cf] text-[#4f67cf] font-semibold
+}
+
+:is(.MuiToolbar-root, .MuiDrawer-paper) .MuiDivider-root {
 	@apply bg-[#f7f7f7]
 }
 
 .MuiTextField-root {
-	@apply w-[20] max-w-[20]
+	@apply w-[20rem]
 }
 
 form .MuiBox-root > .MuiFormLabel-root {
 	@apply text-[#000000] font-semibold
+}
+
+form .MuiPaper-root {
+	@apply outline-[#afafef] outline p-[1.5rem] w-fit
+}
+
+.PaperFormBox {
+	@apply w-fit p-[2rem]
+}
+
+.PaperFormBoxTopLevelTextField {
+	@apply min-w-[20rem] w-full
+}
+
+.MuiDrawer-paper {
+	@apply bg-[#4f67cf] w-96
+}
+
+.DrawerHeader-root, .MuiListItemButton-root {
+	@apply h-[4.5rem]
+}
+
+.MuiListItemButton-root {
+	@apply px-8
+}
+
+.MuiListItemButton-root .MuiTypography-root {
+	@apply text-lg
+}
+
+.MuiCard-root, .MuiCard-root > .MuiCardActionArea-root {
+	@apply aspect-[3/4] h-[20rem]
 }
