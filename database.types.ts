@@ -93,18 +93,21 @@ export type Database = {
       Choice: {
         Row: {
           choice_no: number
+          is_correct: boolean
           question_no: number
           quiz_id: string
           text: string
         }
         Insert: {
           choice_no?: number
+          is_correct?: boolean
           question_no: number
           quiz_id: string
           text?: string
         }
         Update: {
           choice_no?: number
+          is_correct?: boolean
           question_no?: number
           quiz_id?: string
           text?: string
@@ -167,15 +170,7 @@ export type Database = {
           quiz_id?: string
           title?: string
         }
-        Relationships: [
-          {
-            foreignKeyName: "Quiz_creator_id_fkey"
-            columns: ["creator_id"]
-            isOneToOne: false
-            referencedRelation: "Admin"
-            referencedColumns: ["admin_id"]
-          },
-        ]
+        Relationships: []
       }
       Student: {
         Row: {
