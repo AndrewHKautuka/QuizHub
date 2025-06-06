@@ -9,21 +9,6 @@ export type Json =
 export type Database = {
   public: {
     Tables: {
-      Admin: {
-        Row: {
-          admin_id: string
-          created_at: string
-        }
-        Insert: {
-          admin_id?: string
-          created_at?: string
-        }
-        Update: {
-          admin_id?: string
-          created_at?: string
-        }
-        Relationships: []
-      }
       Attempt: {
         Row: {
           quiz_id: string
@@ -44,13 +29,6 @@ export type Database = {
             isOneToOne: false
             referencedRelation: "Quiz"
             referencedColumns: ["quiz_id"]
-          },
-          {
-            foreignKeyName: "Attempt_student_id_fkey"
-            columns: ["student_id"]
-            isOneToOne: false
-            referencedRelation: "Student"
-            referencedColumns: ["student_id"]
           },
         ]
       }
@@ -169,21 +147,6 @@ export type Database = {
           description?: string
           quiz_id?: string
           title?: string
-        }
-        Relationships: []
-      }
-      Student: {
-        Row: {
-          created_at: string
-          student_id: string
-        }
-        Insert: {
-          created_at?: string
-          student_id?: string
-        }
-        Update: {
-          created_at?: string
-          student_id?: string
         }
         Relationships: []
       }
