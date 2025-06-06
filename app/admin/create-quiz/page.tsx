@@ -82,14 +82,10 @@ export default function CreateQuizPage() {
 		
 		for (let i = 0; i < choices.length; i++) {
 			const choice = choices[i];
-			const { data, error } = await supabase.from("Choice").insert({ quiz_id: quiz_id, question_no: question_no, choice_no: i, text: choice.text, is_correct: correctChoice === i }).eq("quiz_id", quiz_id).eq("question_no", question_no).eq("choice_no", i).select();
+			const { error } = await supabase.from("Choice").insert({ quiz_id: quiz_id, question_no: question_no, choice_no: i, text: choice.text, is_correct: (correctChoice === i) }).eq("quiz_id", quiz_id).eq("question_no", question_no).eq("choice_no", i).select();
 			
 			if (error) {
-				setError(`questions.${i}.choices.${1}.text`, error);
-			}
-			
-			if (data) {
-				
+				setError(`questions.${question_no}.choices.${i}.text`, error);
 			}
 		}
 	}
