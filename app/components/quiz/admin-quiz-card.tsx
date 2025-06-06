@@ -2,8 +2,8 @@ import { Card, CardActionArea, CardContent, CardHeader, Grid, Typography } from 
 import type { Tables } from "database.types";
 
 interface QuizCardProps {
-	quiz: Tables<"Quiz">
-	questions: Tables<"Question">[]
+	quiz: Tables<"Quiz">;
+	questionsCount: number;
 };
 
 export default function AdminQuizCard(props: QuizCardProps) {
@@ -14,7 +14,7 @@ export default function AdminQuizCard(props: QuizCardProps) {
 	return (
 		<Grid>
 			<Card>
-				<CardHeader title={props.quiz.title} subheader={`${props.questions.length} questions`} />
+				<CardHeader title={props.quiz.title} subheader={`${props.questionsCount} questions`} />
 				{/* <CardActionArea onClick={onClick} sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', p: 2, }}> */}
 					<CardContent sx={{ textAlign: 'center', display: 'flex', flexDirection: 'column', alignItems: 'center', }}>
 						<Typography variant="body2">
