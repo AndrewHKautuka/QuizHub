@@ -13,16 +13,16 @@ body {
 	} */
 }
 
-.MuiTypography-h4 {
+body {
+	@apply flex flex-col h-screen
+}
+
+.MuiTypography-h4, .MuiTypography-h5 {
 	@apply font-bold
 }
 
 .MainContentBody {
-	@apply m-8
-}
-
-body > .MuiBox-root {
-	@apply m-8
+	@apply p-8 flex-1 overflow-auto
 }
 
 .MuiToolbar-root {
@@ -42,7 +42,7 @@ body > .MuiBox-root {
 }
 
 .MuiButton-colorPrimary.MuiButton-contained {
-	@apply bg-[#FF5740]
+	@apply bg-[#FF5740] font-semibold
 }
 
 .MuiButton-colorSecondary.MuiButton-outlined {
@@ -90,5 +90,29 @@ form .MuiPaper-root {
 }
 
 .MuiCard-root, .MuiCard-root > .MuiCardActionArea-root {
-	@apply aspect-[3/4] h-[20rem]
+	@apply aspect-[3/4] h-[22rem]
+}
+
+.MuiCardActions-root .MuiButton-colorPrimary {
+	@apply border-2 border-[#4f67cf] text-[#4f67cf] font-semibold
+}
+
+.MuiCardActions-root .MuiButton-colorSecondary {
+	@apply text-[#FF5740] font-semibold
+}
+
+.QuestionChoice-root {
+	@apply outline-2 min-w-fit w-[24rem]
+}
+
+.QuestionChoice-root .MuiTypography-root {
+	@apply font-semibold text-center
+}
+
+.QuestionChoice-correct {
+	@apply bg-green-200 outline-green-800 text-green-800
+}
+
+.QuestionChoice-incorrect {
+	@apply bg-red-200 outline-red-800 text-red-800
 }
