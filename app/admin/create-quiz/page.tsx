@@ -47,14 +47,14 @@ export default function CreateQuizPage() {
 	
 	const insertQuiz = async (formData: FormInput) => {
 		const { title, description } = formData;
-		const { data, error } = await supabase.from("Quiz").insert({ title, description }).eq("title", title).select();
+		const { data, error } = await supabase.from("Quiz").insert({ title, description }).eq("title", title).select().single();
 		
 		if (error) {
 			setError("title", error);
 		}
 		
 		if (data) {
-			await insertQuestions(formData, data[0]);
+			await insertQuestions(formData, data);
 		}
 	}
 	
@@ -64,14 +64,14 @@ export default function CreateQuizPage() {
 		
 		for (let i = 0; i < questions.length; i++) {
 			const question = questions[i];
-			const { data, error } = await supabase.from("Question").insert({ quiz_id: quiz_id, question_no: i, text: question.text }).eq("quiz_id", quiz_id).eq("question_no", i).select();
+			const { data, error } = await supabase.from("Question").insert({ quiz_id: quiz_id, question_no: i, text: question.text }).eq("quiz_id", quiz_id).eq("question_no", i).select().single();
 			
 			if (error) {
 				setError(`questions.${i}.text`, error);
 			}
 			
 			if (data) {
-				await insertChoices(formData, data[0]);
+				await insertChoices(formData, data);
 			}
 		}
 	}
@@ -82,7 +82,7 @@ export default function CreateQuizPage() {
 		
 		for (let i = 0; i < choices.length; i++) {
 			const choice = choices[i];
-			const { error } = await supabase.from("Choice").insert({ quiz_id: quiz_id, question_no: question_no, choice_no: i, text: choice.text, is_correct: (correctChoice === i) }).eq("quiz_id", quiz_id).eq("question_no", question_no).eq("choice_no", i).select();
+			const { error } = await supabase.from("Choice").insert({ quiz_id: quiz_id, question_no: question_no, choice_no: i, text: choice.text, is_correct: (correctChoice === i) }).eq("quiz_id", quiz_id).eq("question_no", question_no).eq("choice_no", i).select().single();
 			
 			if (error) {
 				setError(`questions.${question_no}.choices.${i}.text`, error);
