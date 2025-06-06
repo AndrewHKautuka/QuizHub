@@ -1,9 +1,12 @@
 import { Card, CardActionArea, CardContent, Grid, Typography } from "@mui/material";
 import AddIcon from "@mui/icons-material/Add";
+import { useNavigate } from "react-router";
 
 export default function CreateQuizCard() {
+	const navigate = useNavigate();
+	
 	const onClick = () => {
-		
+		navigate("/admin/quiz/new");
 	};
 	
 	return (
