@@ -11,6 +11,10 @@ export default [
 	...prefix("admin", [
 		layout("admin/dashboard.tsx", [
 			index("admin/home.tsx"),
+			
+			...prefix("quiz", [
+				route("new", "admin/create-quiz/page.tsx"),
+			]),
 		]),
 	]),
 ] satisfies RouteConfig;
