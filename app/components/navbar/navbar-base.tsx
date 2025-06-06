@@ -7,7 +7,7 @@ interface NavBarProps {
 
 export default function NavBarBase(props: NavBarProps) {
 	return (
-		<AppBar position='static'>
+		<AppBar position="static">
 			<Toolbar>
 				<Stack direction="row" sx={{ justifyContent: "space-between", alignItems: "center", flexGrow: 1 }}>
 					{ props.lhsContent ?? <Box></Box> }
