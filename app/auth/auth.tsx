@@ -18,16 +18,18 @@ export default function AuthPage() {
 	};
 	
 	return (
-		<Container sx={{ marginTop: 8 }}>
-			<Paper sx={{ padding: 4 }}>
-				<Box sx={{ borderBottom: 1, borderColor: 'divider', marginBottom: 2 }}>
-					<Tabs value={value} onChange={handleChange}>
-						<Tab label="Sign Up" value={"sign-up"} />
-						<Tab label="Log In" value={"log-in"} />
-					</Tabs>
-				</Box>
-				<Outlet />
-			</Paper>
-		</Container>
+		<Box className="MainContentBody">
+			<Container sx={{ marginTop: 8 }}>
+				<Paper sx={{ padding: 4 }}>
+					<Box sx={{ borderBottom: 1, borderColor: 'divider', marginBottom: 2 }}>
+						<Tabs value={value} onChange={handleChange}>
+							<Tab label="Sign Up" value={"sign-up"} />
+							<Tab label="Log In" value={"log-in"} />
+						</Tabs>
+					</Box>
+					<Outlet />
+				</Paper>
+			</Container>
+		</Box>
 	);
 }

@@ -48,7 +48,7 @@ export default function Home() {
 	}, []);
 	
 	return (
-		<Box>
+		<Box className="MainContentBody">
 			{error === undefined ? (
 				<Typography className="font-semibold pb-4" variant="body1">
 					There {quizzes.length === 0 ? "are no quizzes" : (quizzes.length === 1 ? "is 1 quiz" : `are ${quizzes.length} quizzes`)} available.

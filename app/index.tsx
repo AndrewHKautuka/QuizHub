@@ -6,7 +6,7 @@ export default function LandingPage() {
 	return (
 		<>
 			<UnAuthNavBar />
-			<Box>
+			<Box className="MainContentBody">
 				<Typography variant='h4'>Welcome to QuizHub!</Typography>
 			</Box>
 		</>
